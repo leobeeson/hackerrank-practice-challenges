@@ -13,3 +13,20 @@ if __name__ == '__main__':
         b = input()
         result = abbreviation(a, b)
         print(result + "\n")
+
+
+
+# Examples
+
+# AbcDE
+# ABDE
+# Answer: Yes
+
+# AbcDE
+# AFDE
+# Answer: No
+
+# daBcd
+# ABC
+# Answer: yes
+
