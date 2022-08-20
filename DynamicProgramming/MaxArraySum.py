@@ -4,7 +4,10 @@ def maxSubsetSum(arr):
     if len(arr) == 0:
         return 0
     
-    if len(arr) == 1:
+    if sum(arr) < 0:
+        return 0
+
+    if all(i < 0 for i in arr):
         return arr[0]
     
     maximums = [0]*len(arr)
