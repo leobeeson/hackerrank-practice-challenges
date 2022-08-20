@@ -1,11 +1,9 @@
 import pytest
 
 
-def abbreviation(a: str, b:str) -> str:
-    candidates = set(a)
-    for letter in b:
-        if letter not in candidates:
-            return "NO"
+def abbreviation(a: str, b:str) -> str:    
+    if len(set(b).difference(set(a))) > 0:
+        return "NO"
 
 
 def test_b_has_letters_missing_in_a() -> None:
@@ -25,16 +23,14 @@ if __name__ == '__main__':
         print(result + "\n")
 
 
-
-
 # Examples
 
 # AbcDE
 # ABDE
 # Answer: Yes
 
-# AbcDE
-# AFDE
+# a = "AbcDE"
+# b = "AFDE"
 # Answer: No
 
 # daBcd
